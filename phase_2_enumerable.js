@@ -45,7 +45,7 @@ Array.prototype.myReduce = function(cb, accumulator) {
     accumulator = this[0];
     array = array.slice[1];
   }
-  
+
   array.myEach((el) => {
     accumulator = cb(el, accumulator);
   });
