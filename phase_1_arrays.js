@@ -1,3 +1,4 @@
+
 // Array.prototype.uniq = function uniq() {
 //   const result = [];
 //   for (let i = 0; i < this.length; i++) {
@@ -15,8 +16,8 @@ Array.prototype.uniq = function() {
       result.push(num);
     }
   });
-  return result;
-};
+
+
 
 
 
