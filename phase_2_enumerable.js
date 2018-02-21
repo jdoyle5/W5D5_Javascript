@@ -13,7 +13,7 @@ Array.prototype.myEach = function(cb) {
 // Array.prototype.myMap = function MyMap(callback){
 //   const result = [];
 //   this.myEach(function (el){
-//     result.push(callback(el));
+//     result.push(callback(el));s
 //   });
 //   return result;
 // };
@@ -38,3 +38,17 @@ Array.prototype.myMap = function(cb) {
 //
 //   return accumulator;
 // };
+
+Array.prototype.myReduce = function(cb, accumulator) {
+  let array = this;
+  if (!accumulator) {
+    accumulator = this[0];
+    array = array.slice[1];
+  }
+  
+  array.myEach((el) => {
+    accumulator = cb(el, accumulator);
+  });
+
+  return accumulator;
+};
