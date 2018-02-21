@@ -18,7 +18,13 @@ Array.prototype.myEach = function(cb) {
 //   return result;
 // };
 
-
+Array.prototype.myMap = function(cb) {
+  let result = [];
+  this.myEach((el) => {
+    result.push(cb(el));
+  });
+  return result;
+};
 
 // Array.prototype.myReduce = function MyReduce(callback, accumulator){
 //   let arr=this;
