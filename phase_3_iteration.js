@@ -46,3 +46,7 @@ Array.prototype.bubbleSort = function() {
 //   }
 //   return result;
 // };
+
+String.prototype.subString = function() {
+
+};

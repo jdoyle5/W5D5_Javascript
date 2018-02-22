@@ -16,6 +16,7 @@ Array.prototype.uniq = function() {
       result.push(num);
     }
   });
+};
 
 
 
