@@ -36,6 +36,13 @@ function sumRec(array) {
 //   }
 //   return base * exponent(base, exp-1);
 // }
+
+function exponent(base, exp) {
+  if (exp <= 1) {
+    return base;
+  }
+  return base * exponent(base, exp - 1);
+}
 //
 // function exponent2(base, exp){
 //   if (exp===0){
