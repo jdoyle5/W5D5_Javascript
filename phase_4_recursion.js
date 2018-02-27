@@ -82,20 +82,30 @@ function fibo(n) {
   return temp;
 }
 
-function bsearch(arr, target) {
-  if (arr[arr.length/2]===target){
-    return Math.floor(arr.length/2);
-  } else if(arr.length===1){
+// function bsearch(arr, target) {
+//   if (arr[arr.length/2]===target){
+//     return Math.floor(arr.length/2);
+//   } else if(arr.length===1){
+//     return -1;
+//   }
+//
+//   if (arr[arr.length/2]>target){
+//     bsearch(arr.slice((Math.floor(arr.length/2)), (arr.length - 1)));
+//   } else{
+//     bsearch( arr.slice( 0, Math.floor(arr.length/2)));
+//   }
+// }
+function bsearch(array, target) {
+  if (array[Math.floor(array.length / 2)] === target) {
+    return Math.floor(array.length / 2);
+  } else if (array.length === 1) {
     return -1;
   }
 
-  if (arr[arr.length/2]>target){
-    bsearch(arr.slice((Math.floor(arr.length/2)), (arr.length - 1)));
-  } else{
-    bsearch( arr.slice( 0, Math.floor(arr.length/2)));
+  if (array[array.length / 2] < target) {
+    bsearch(array.slice())
   }
 }
-
 
 //
 //
