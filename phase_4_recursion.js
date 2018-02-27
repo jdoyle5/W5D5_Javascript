@@ -63,21 +63,40 @@ function exponent(base, exp) {
 //    temp.push(num);
 //    return temp;
 // }
-//
-// function bsearch(arr, target) {
-//   if (arr[arr.length/2]===target){
-//     console.log(arr);
-//     return Math.floor(arr.length/2);
-//   } else if(arr.length===1){
-//     return -1;
-//   }
-//
-//   if (arr[arr.length/2]>target){
-//     bsearch(arr.slice((Math.floor(arr.length/2)), (arr.length - 1)));
-//   } else{
-//     bsearch( arr.slice( 0, Math.floor(arr.length/2)));
-//   }
-// }
+
+function fibo(n) {
+  if (n <= 1) {
+    return null;
+  }
+  if (n === 1) {
+    return [1];
+  }
+  if (n === 2) {
+    return [1, 1];
+  }
+
+  let temp = fibo(n - 1);
+  let num = temp[temp.length - 1] + temp[temp.length - 2];
+
+  temp.push(num);
+  return temp;
+}
+
+function bsearch(arr, target) {
+  if (arr[arr.length/2]===target){
+    return Math.floor(arr.length/2);
+  } else if(arr.length===1){
+    return -1;
+  }
+
+  if (arr[arr.length/2]>target){
+    bsearch(arr.slice((Math.floor(arr.length/2)), (arr.length - 1)));
+  } else{
+    bsearch( arr.slice( 0, Math.floor(arr.length/2)));
+  }
+}
+
+
 //
 //
 // function mergeSort(arr) {
